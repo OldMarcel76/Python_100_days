@@ -1,0 +1,59 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#print(scissors)
+import random
+my_choose = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors "))
+
+option_choose = [rock,paper,scissors]
+tt_option_choose = len(option_choose)
+
+computer_choose = random.randint(0,tt_option_choose-1)
+
+print(option_choose[computer_choose])
+
+if my_choose == 0 and computer_choose == 1:
+    print(option_choose[my_choose])
+    print("You Lose!")
+elif my_choose == 0 and computer_choose == 2:
+    print(option_choose[my_choose])
+    print("You Win!")
+elif my_choose == 1 and computer_choose == 0:
+    print(option_choose[my_choose])
+    print("You Win!")
+elif my_choose == 1 and computer_choose == 2:
+    print(option_choose[my_choose])
+    print("You Lose!")
+elif my_choose == 2 and computer_choose == 0:
+    print(option_choose[my_choose])
+    print("You Lose!")
+elif my_choose == 2 and computer_choose == 1:
+    print(option_choose[my_choose])
+    print("You Win!")
+else:
+    print(option_choose[my_choose])
+    print("Nobody Win!")
